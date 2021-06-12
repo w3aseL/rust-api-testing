@@ -1,0 +1,13 @@
+2021-06-12 15:19:05 [INFO] Environment Stage: development
+2021-06-12 15:19:05 [INFO] Server launched on 127.0.0.1:8000
+2021-06-12 15:28:56 [INFO] Environment Stage: development
+2021-06-12 15:28:56 [INFO] Server launched on 127.0.0.1:8000
+2021-06-12 15:31:07 [INFO] Environment Stage: development
+2021-06-12 15:31:07 [INFO] Server launched on 127.0.0.1:8000
+2021-06-12 15:38:24 [INFO] Environment Stage: development
+2021-06-12 15:38:24 [INFO] Server launched on 127.0.0.1:8000
+2021-06-12 15:38:42 [INFO] Environment Stage: development
+2021-06-12 15:38:42 [INFO] Server launched on 127.0.0.1:8000
+2021-06-12 15:38:45 [INFO] [32m200 OK[0m GET /test
+2021-06-12 15:45:20 [INFO] Environment Stage: development
+2021-06-12 15:45:20 [INFO] Server launched on 127.0.0.1:8000
