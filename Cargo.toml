@@ -8,7 +8,7 @@ edition = "2018"
 
 [dependencies]
 rocket = { version = "0.4.10" }
-rocket_contrib = { version = "0.4.10", default-features = false, features = ["json"] }
+rocket_contrib = { version = "0.4.10", default-features = false, features = ["json", "serve"] }
 serde = { version = "1.0", features = [ "derive" ] }
 serde_json = "1.0"
 dotenv = "0.15"
@@ -17,3 +17,5 @@ fern = { version = "0.5", features = [ "colored" ] }
 chrono = "0.4.19"
 lazy_static = "1.4.0"
 colored = "2.0.0"
+multipart = "0.18.0"
+image = "0.23.14"

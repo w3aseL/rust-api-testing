@@ -7,6 +7,7 @@ extern crate log;
 extern crate fern;
 #[macro_use]
 extern crate lazy_static;
+extern crate multipart;
 
 pub mod logger;
 pub mod api;

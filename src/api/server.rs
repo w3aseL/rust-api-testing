@@ -3,16 +3,23 @@ use rocket::{ Rocket };
 use rocket::http::{ ContentType, Status };
 use rocket::request::{ Request };
 use rocket::response::{ self, Responder, Response };
+use rocket_contrib::serve::{ StaticFiles };
 use serde::{ Serialize };
 use serde_json;
 
-use crate::api::routes::index;
+use crate::api::routes::{ index, images };
 use crate::api::config::get_config;
 use crate::api::logging::Logger;
+use crate::api::catchers;
 
 #[derive(Debug, Serialize)]
 pub struct SimpleResponse {
 	pub message: &'static str
+}
+
+#[derive(Debug, Serialize)]
+pub struct ErrorResponse {
+	pub error: String
 }
 
 #[derive(Debug)]
@@ -45,5 +52,7 @@ impl<'a> Responder<'a> for JsonResponse {
 pub fn build_server() -> Rocket {
 	rocket::custom(get_config())
 		.attach(Logger::default())
-		.mount("/", routes![index::index, index::test])
+		.register(catchers![catchers::not_found])
+		.mount("/", routes![index::index, index::test, images::upload_image])
+		.mount("/", StaticFiles::from("public"))
 }
